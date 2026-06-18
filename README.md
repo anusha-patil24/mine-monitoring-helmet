@@ -23,7 +23,7 @@ This project uses **Arduino (ESP32)** and **Node‑RED** to monitor environmenta
 4. Monitor temperature, humidity, gas, oxygen, flame, and GPS location.
 
 ## Screenshots
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](IMAGE 1.jpeg)
 
 ## Future Work
 - Add real oxygen sensor support.
