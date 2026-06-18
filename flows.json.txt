@@ -1,0 +1,442 @@
+[
+    {
+        "id": "34b1665aa791629d",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5f39225f84f784db",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Mine  monitoring",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ce82641cc0d782e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "serial_config",
+        "type": "serial-port",
+        "name": "COM PORT",
+        "serialport": "COM5",
+        "serialbaud": "57600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "newline": "",
+        "addchar": "",
+        "responsetimeout": ""
+    },
+    {
+        "id": "bde78a90934673ed",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "broker1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883"
+    },
+    {
+        "id": "tab1",
+        "type": "ui_tab",
+        "name": "Sensors",
+        "icon": "dashboard"
+    },
+    {
+        "id": "group1",
+        "type": "ui_group",
+        "name": "Mine Monitoring",
+        "tab": "tab1",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "350da273af6f3af5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c08c2efc23c3b454",
+        "type": "ui_group",
+        "name": "sensors ",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b18c595132c3f7d7",
+        "type": "ui_spacer",
+        "z": "34b1665aa791629d",
+        "name": "spacer",
+        "group": "c08c2efc23c3b454",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "aa0ec8db6c80ea6a",
+        "type": "ui_spacer",
+        "z": "34b1665aa791629d",
+        "name": "spacer",
+        "group": "c08c2efc23c3b454",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "44f802bd0961447b",
+        "type": "mqtt in",
+        "z": "34b1665aa791629d",
+        "name": "",
+        "topic": "bharatpi/hruthik/v27/mine/monitor",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "350da273af6f3af5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "0275b1270f23a270"
+            ]
+        ]
+    },
+    {
+        "id": "3eca459739bdf8d0",
+        "type": "debug",
+        "z": "34b1665aa791629d",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2b56153a985aa659",
+        "type": "function",
+        "z": "34b1665aa791629d",
+        "name": "safety logic",
+        "func": "// Ignore empty messages\nif (!msg.payload) {\n    return null;\n}\n\n// If payload is string, parse it\nif (typeof msg.payload === \"string\") {\n    try {\n        msg.payload = JSON.parse(msg.payload);\n    } catch (e) {\n        return null;\n    }\n}\n\nlet d = msg.payload;\n\n// Stop if temp missing\nif (typeof d.temp === \"undefined\") {\n    return null;\n}\n\n// Remap fields for dashboard\nmsg.payload = {\n    temp: d.temp,\n    hum: d.hum,              // ✅ Arduino \"hum\" → humidity\n    gas: d.gas,\n    oxygen: d.oxygen || 0,        // fallback if oxygen not sent\n    flame: d.flame,\n    lat: d.lat,\n    lon: d.lng\n};\n\n// Extra flags\nmsg.alert = (d.temp > 45 || d.gas > 3000 || d.flame == 1);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "f4d37e9813475d79",
+                "3eca459739bdf8d0",
+                "37d5e768c2e976ad"
+            ]
+        ]
+    },
+    {
+        "id": "e552c1e524e0d354",
+        "type": "ui_template",
+        "z": "34b1665aa791629d",
+        "group": "group1",
+        "name": "cssTemplet",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"width:100%; height:100%; font-family:Arial; padding:15px; background:#1e1e2f; color:#fff;\">\n  <h2 style=\"text-align:center;\">⛏️ Mine Monitoring Dashboard</h2>\n\n  <!-- Safety Status Section -->\n  <div style=\"text-align:center; font-size:24px; font-weight:bold; margin-bottom:20px;\n              color: {{msg.payload.gas > 2000 || msg.payload.flame === 1 ? 'red' : 'lime'}};\">\n    {{msg.payload.gas > 2000 || msg.payload.flame === 1 ? '⚠️ DANGER' : '✅ SAFE'}}\n  </div>\n\n  <!-- Gauges Section -->\n  <div style=\"display:flex; justify-content:space-around; flex-wrap:wrap;\">\n\n    <!-- Temperature -->\n    <div style=\"flex:1; text-align:center; margin:10px;\">\n      <div style=\"margin-bottom:5px; font-weight:bold;\">🌡️ Temperature (°C)</div>\n      <div style=\"height:120px; width:120px; margin:auto; border-radius:50%;\n                  background:conic-gradient(#00ff00 {{msg.payload.temp/60*120}}deg,\n                                            #ffff00 {{msg.payload.temp/60*240}}deg,\n                                            #ff0000 {{msg.payload.temp/60*360}}deg,\n                                            #333 0deg);\n                  display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:bold;\">\n        {{msg.payload.temp}} °C\n      </div>\n    </div>\n\n    <!-- Humidity -->\n    <div style=\"flex:1; text-align:center; margin:10px;\">\n      <div style=\"margin-bottom:5px; font-weight:bold;\">💧 Humidity (%)</div>\n      <div style=\"height:120px; width:120px; margin:auto; border-radius:50%;\n                  background:conic-gradient(#00bfff {{msg.payload.hum/100*360}}deg, #333 0deg);\n                  display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:bold;\">\n        {{msg.payload.hum}} %\n      </div>\n    </div>\n\n    <!-- Gas -->\n    <div style=\"flex:1; text-align:center; margin:10px;\">\n      <div style=\"margin-bottom:5px; font-weight:bold;\">🛢️ Gas Level (ppm)</div>\n      <div style=\"height:120px; width:120px; margin:auto; border-radius:50%;\n                  background:conic-gradient(#00ff00 {{msg.payload.gas/4095*120}}deg,\n                                            #ffff00 {{msg.payload.gas/4095*240}}deg,\n                                            #ff0000 {{msg.payload.gas/4095*360}}deg,\n                                            #333 0deg);\n                  display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:bold;\">\n        {{msg.payload.gas}} ppm\n      </div>\n    </div>\n\n    <!-- Oxygen -->\n    <div style=\"flex:1; text-align:center; margin:10px;\">\n      <div style=\"margin-bottom:5px; font-weight:bold;\">🫁 Oxygen (%)</div>\n      <div style=\"height:120px; width:120px; margin:auto; border-radius:50%;\n                  background:conic-gradient(#32cd32 {{msg.payload.oxygen/100*360}}deg, #333 0deg);\n                  display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:bold;\">\n        {{msg.payload.oxygen}} %\n      </div>\n    </div>\n\n    <!-- Flame -->\n    <div style=\"flex:1; text-align:center; margin:10px;\">\n      <div style=\"margin-bottom:5px; font-weight:bold;\">🔥 Flame</div>\n      <div style=\"font-size:20px; font-weight:bold; color:{{msg.payload.flame === 1 ? 'red' : 'lime'}};\">\n        {{msg.payload.flame}}\n      </div>\n    </div>\n  </div>\n\n  <!-- GPS Map Section -->\n  <h3 style=\"text-align:center; margin-top:20px; margin-bottom:10px;\">📍 GPS Location</h3>\n  <iframe src=\"https://www.openstreetmap.org/?mlat={{msg.payload.lat}}&mlon={{msg.payload.lon}}&zoom=15\"\n          width=\"100%\" height=\"0\" style=\"border:none; border-radius:8px; display:block; margin:auto;\"></iframe>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "cssTemplet",
+        "x": 910,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4d37e9813475d79",
+        "type": "ui_template",
+        "z": "34b1665aa791629d",
+        "group": "group1",
+        "name": "Alert Indicator",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<div ng-style=\"{'color': msg.alert ? 'red':'green',\n                 'font-size':'24px',\n                 'animation': msg.alert ? 'blinker 1s linear infinite':'none'}\">\n    {{msg.alert ? \"⚠ DANGER\" : \"SAFE\"}}\n</div>\n\n<style>\n@keyframes blinker { 50% { opacity: 0; } }\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 760,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0275b1270f23a270",
+        "type": "json",
+        "z": "34b1665aa791629d",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "2b56153a985aa659"
+            ]
+        ]
+    },
+    {
+        "id": "37d5e768c2e976ad",
+        "type": "function",
+        "z": "34b1665aa791629d",
+        "name": "function 2",
+        "func": "msg.payload = {\n    temp: msg.payload.temp,\n    hum: msg.payload.hum,   // ✅ map Arduino \"hum\" → \"humidity\"\n    gas: msg.payload.gas,\n    oxygen: msg.payload.oxygen || 0,  // fallback if oxygen not sent\n    flame: msg.payload.flame,\n    lat: msg.payload.lat,\n    lon: msg.payload.lng\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 160,
+        "wires": [
+            [
+                "e552c1e524e0d354",
+                "6f43672e209a48ad"
+            ]
+        ]
+    },
+    {
+        "id": "6f43672e209a48ad",
+        "type": "ui_worldmap",
+        "z": "34b1665aa791629d",
+        "group": "group1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Miner GPS.",
+        "lat": "13.015925",
+        "lon": "77.703484",
+        "zoom": "",
+        "layer": "EsriC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "deg",
+        "showgrid": "false",
+        "showruler": "true",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 930,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d67894c38dec209a",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-serialport": "2.0.3",
+            "node-red-contrib-web-worldmap": "5.5.7"
+        }
+    }
+]
